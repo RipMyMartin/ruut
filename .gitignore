@@ -1,0 +1,11 @@
+﻿# Ignore Visual Studio specific files and directories
+.vs/
+# Ignore build and output directories
+bin/
+obj/
+# Ignore other common build artifacts
+*.pdb
+*.exe
+*.dll
+*.cache
+*.sourcelink.json
