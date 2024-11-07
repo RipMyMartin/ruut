@@ -13,10 +13,10 @@ namespace Tringle
 
         public Tringle_Vorm()
         {
-            this.components = new System.ComponentModel.Container();
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(850, 450);
-            this.Text = "Form1";
+            components = new System.ComponentModel.Container();
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(850, 450);
+            Text = "Form1";
 
             InitializeCustomComponents();
             Side();
@@ -49,9 +49,29 @@ namespace Tringle
                 Cursor = Cursors.Hand
             };
 
+            Button SecondVorm = new Button
+            {
+                Text = "Minu",
+                Font = new Font("Arial", 28, FontStyle.Regular),
+                Size = new(150, 80),
+                BackColor = Color.LightSeaGreen,
+                ForeColor = Color.White,
+                FlatStyle = FlatStyle.Flat,
+                Location = new Point(680, 350),
+                Cursor = Cursors.Hand
+            };
+
+            SecondVorm.Click += SecondVorm_Click;
             startButton.Click += StartButton_Click;
 
+            Controls.Add(SecondVorm);
             Controls.Add(startButton);
+        }
+
+        private void SecondVorm_Click(object? sender, EventArgs e)
+        {
+            MinuForm minuForm = new MinuForm();
+            minuForm.Show();
         }
 
         private void DisplayTriangleInfo()
@@ -207,34 +227,29 @@ namespace Tringle
                 double b = triangle.GetSetB;
                 double c = triangle.GetSetC;
 
-                // Check if the triangle is valid
                 if (a + b <= c || a + c <= b || b + c <= a)
                 {
-                    trianglePoints = null; // Set to null to prevent drawing
-                    return; // Exit if the triangle is invalid
+                    trianglePoints = null;
+                    return;
                 }
 
                 double s = (a + b + c) / 2;
                 double area = Math.Sqrt(s * (s - a) * (s - b) * (s - c));
                 double height = (2 * area) / a;
 
-                // Determine the maximum height and base lengths that fit 80% within the panel
                 int panelWidth = (int)(drawingPanel.Width * 0.4);
                 int panelHeight = (int)(drawingPanel.Height * 0.4);
 
-                // Scale factors to fit within 80% of the drawing panel
                 double scaleX = Math.Min(panelWidth / (a * 20), panelWidth / (b * 20));
                 double scaleY = Math.Min(panelHeight / (height * 20), panelHeight / (height * 20));
                 double scale = Math.Min(scaleX, scaleY);
 
-                // Calculate the center position for the triangle
                 int centerX = drawingPanel.Location.X + drawingPanel.Width / 2;
-                int centerY = drawingPanel.Location.Y + drawingPanel.Height / 2; // Center vertically
+                int centerY = drawingPanel.Location.Y + drawingPanel.Height / 2; 
 
-                // Define triangle points scaled to fit within the panel and centered
                 trianglePoints = new Point[3];
-                trianglePoints[0] = new Point(centerX, centerY - (int)(height * 20 * scale)); // Top point
-                trianglePoints[1] = new Point(centerX - (int)(b * 20 * scale / 2), centerY + (int)(height * 20 * scale / 2)); // Bottom left
+                trianglePoints[0] = new Point(centerX, centerY - (int)(height * 20 * scale)); 
+                trianglePoints[1] = new Point(centerX - (int)(b * 20 * scale / 2), centerY + (int)(height * 20 * scale / 2));
                 trianglePoints[2] = new Point(centerX + (int)(a * 20 * scale / 2), centerY + (int)(height * 20 * scale / 2)); // Bottom right
             }
         }

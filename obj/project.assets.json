@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\opilane\\Source\\Repos\\Triangle\\Tringle.csproj",
+      "projectUniqueName": "C:\\Users\\opilane\\Source\\Repos\\ruut\\Tringle.csproj",
       "projectName": "Tringle",
-      "projectPath": "C:\\Users\\opilane\\Source\\Repos\\Triangle\\Tringle.csproj",
+      "projectPath": "C:\\Users\\opilane\\Source\\Repos\\ruut\\Tringle.csproj",
       "packagesPath": "C:\\Users\\opilane\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\opilane\\Source\\Repos\\Triangle\\obj\\",
+      "outputPath": "C:\\Users\\opilane\\Source\\Repos\\ruut\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
