@@ -70,7 +70,7 @@ namespace Tringle
 
         private void SecondVorm_Click(object? sender, EventArgs e)
         {
-            MinuForm minuForm = new MinuForm();
+            Form1 minuForm = new Form1();
             minuForm.Show();
         }
 
