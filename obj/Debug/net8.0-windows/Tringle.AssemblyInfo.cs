@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Tringle")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1013d58ec26752b0f814ab7acc1f96b6aee026de")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3d544559e70a401295a215412e2744442168a449")]
 [assembly: System.Reflection.AssemblyProductAttribute("Tringle")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Tringle")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
